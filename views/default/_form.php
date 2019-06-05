@@ -117,11 +117,11 @@ use kartik\switchinput\SwitchInput;
                         <div class="form-group">
                             <?php  if ($model->isNewRecord): ?>
                                 <?= Html::submitButton(Yii::t('art', 'Create'), ['class' => 'btn btn-primary']) ?>
-                                <?= Html::a(Yii::t('art', 'Cancel'), ['/carousel/index'], ['class' => 'btn btn-default']) ?>
+                                <?= Html::a(Yii::t('art', 'Cancel'), ['/carousel/default/index'], ['class' => 'btn btn-default']) ?>
                             <?php  else: ?>
                                 <?= Html::submitButton(Yii::t('art', 'Save'), ['class' => 'btn btn-primary']) ?>
                                 <?= Html::a(Yii::t('art', 'Delete'),
-                                    ['/carousel/delete', 'id' => $model->id], [
+                                    ['/carousel/default/delete', 'id' => $model->id], [
                                     'class' => 'btn btn-default',
                                     'data' => [
                                         'confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
