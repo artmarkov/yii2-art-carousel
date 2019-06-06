@@ -22,9 +22,9 @@ use artsoft\db\ActiveRecord;
  * @property int $pagination
  * @property string $transition_style
  * @property string $auto_play
- * @property integer $created_by
  * @property integer $created_at
  * @property integer $updated_at
+ * @property integer $created_by
  * @property integer $updated_by
  */
 class Carousel extends ActiveRecord implements OwnerAccess 
@@ -62,10 +62,10 @@ class Carousel extends ActiveRecord implements OwnerAccess
     public function rules()
     {
         return [
-            [['items', 'single_item', 'navigation', 'pagination', 'transition_style', 'auto_play'], 'required'],
+            [['items', 'single_item', 'navigation', 'pagination', 'transition_style', 'auto_play', 'name'], 'required'],
             [['items', 'single_item', 'navigation', 'pagination', 'status', 'created_at', 'updated_at'], 'integer'],
             [['name', 'slug', 'transition_style', 'auto_play'], 'string', 'max' => 127],
-            [['created_at', 'updated_at', 'created_by', 'updated_by'], 'safe'],
+            [['created_at', 'updated_at', 'created_by', 'updated_by', 'slug'], 'safe'],
             [['updated_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['updated_by' => 'id']],
             [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
         ];
