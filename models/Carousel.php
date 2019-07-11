@@ -63,6 +63,7 @@ class Carousel extends ActiveRecord implements OwnerAccess
     {
         return [
             [['items', 'single_item', 'navigation', 'pagination', 'transition_style', 'auto_play', 'name'], 'required'],
+            ['slug', 'required', 'enableClientValidation' => false],
             [['items', 'single_item', 'navigation', 'pagination', 'status', 'created_at', 'updated_at'], 'integer'],
             [['name', 'slug', 'transition_style', 'auto_play'], 'string', 'max' => 127],
             [['created_at', 'updated_at', 'created_by', 'updated_by', 'slug'], 'safe'],

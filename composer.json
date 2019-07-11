@@ -9,6 +9,8 @@
     }
   ],
   "require": {
+    "kartik-v/yii2-widget-switchinput": "dev-master",
+    "kartik-v/yii2-widget-colorinput": "*",
     "artsoft/yii2-art-core": "dev-master",
     "artsoft/yii2-art-mediamanager": "dev-master"
   },
