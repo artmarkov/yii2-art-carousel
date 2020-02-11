@@ -94,6 +94,7 @@ use kartik\switchinput\SwitchInput;
                         ]) ?>
                 <?php endif; ?>
             </div>
+            <?= \artsoft\widgets\InfoModel::widget(['model'=>$model]); ?>
         </div>
 
         <?php ActiveForm::end(); ?>
